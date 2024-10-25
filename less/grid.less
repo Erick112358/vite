@@ -1,0 +1,39 @@
+.generarGrilla(@prefijo,@columnas,@iteracion:1) when (@iteracion<=@columnas){
+    @selector-columna: ~".col-@{prefijo}@{iteracion}";
+    @selector-offset: ~".offset-@{prefijo}@{iteracion}";
+    @ancho-base: (100% / @columnas * @iteracion);
+    @{selector-columna}{
+        flex: 0 0 @ancho-base;
+    }
+    @{selector-offset}{
+        margin-left: @ancho-base;
+    }
+    .generarGrilla(@prefijo,@columnas,(@iteracion + 1));
+    
+}
+
+.grid{
+    display: flex;
+    .row{
+        display: flex;
+        flex: 1 100%;
+        flex-wrap: wrap;
+        [class*="col-"]{
+            border: 1px solid #333;
+        }
+
+        .generarGrilla("", 6);
+        @media (@breakResolutions[tablet]){
+            .generarGrilla("tl-", 12)
+        }
+        @media (@breakResolutions[desktop]){
+            .generarGrilla("dt-", 12)
+        }
+        @media (@breakResolutions[widescreen]){
+            .generarGrilla("ws-", 12)
+        }
+        @media (@breakResolutions[ultrawide]){
+            .generarGrilla("uws-", 12)
+        }
+    }
+}
