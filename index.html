@@ -7,27 +7,7 @@
     <link rel="stylesheet" href="less/main.less">
 </head>
 <body>
-    <header>
-        <div class="container">
-          <section class="branding">
-            <img src="logo.png" alt="Logo" class="logo">
-            <h1>Succulent Miracle Spray</h1>
-          </section>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <button class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
-        </div>
-    </header>
+    {{>header}}
 
     <main>
         <section class="hero">
@@ -95,16 +75,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2023 Succulent Miracle Spray. All rights reserved.</p>
-            <ul class="social">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-    </footer>
+    {{>footer}}
 
     <script src="script.js"></script>
 </body>
