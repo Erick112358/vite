@@ -10,6 +10,21 @@ header {
         padding-left: 1rem;
         padding-right: 1rem;
 
+        .branding {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            img {
+                border-radius: 50%;
+                box-shadow: 1px 1px 5px @primary-background-color-dark;
+            }
+
+            h1 {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+
         nav {
             ul {
                 list-style: none;
@@ -30,16 +45,10 @@ header {
                     }
                 }
             }
-
             .hamburger {
                 display: none;
             }
         }
-
-        .branding {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
     }
+
 }
